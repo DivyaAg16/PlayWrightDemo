@@ -1,0 +1,642 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Page object test demo >> Add to cart test_03
+- Location: /home/divyag/Downloads/PlayWrightDemo/pomtest/addToCart.test.ts:40:9
+
+# Error details
+
+```
+Error: locator.waitFor: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('//a[.=\'View Cart \']') to be visible
+
+    at SpecialHotPage.isToastVisible (/home/divyag/Downloads/PlayWrightDemo/pages/specialHotPage.ts:18:21)
+    at /home/divyag/Downloads/PlayWrightDemo/pomtest/addToCart.test.ts:48:45
+```
+
+# Page snapshot
+
+```yaml
+- heading "Top categories close" [level=5]:
+  - text: Top categories
+  - link "close": 
+- navigation:
+  - list:
+    - listitem:
+      - link "Components":
+        - img
+        - text: Components
+    - listitem:
+      - link "Cameras":
+        - img
+        - text: Cameras
+    - listitem:
+      - link "Phone, Tablets & Ipod":
+        - img
+        - text: Phone, Tablets & Ipod
+    - listitem:
+      - link "Software":
+        - img
+        - text: Software
+    - listitem:
+      - link "MP3 Players":
+        - img
+        - text: MP3 Players
+    - listitem:
+      - link "Laptops & Notebooks":
+        - img
+        - text: Laptops & Notebooks
+    - listitem:
+      - link "Desktops and Monitors":
+        - img
+        - text: Desktops and Monitors
+    - listitem:
+      - link "Printers & Scanners":
+        - img
+        - text: Printers & Scanners
+    - listitem:
+      - link "Mice and Trackballs":
+        - img
+        - text: Mice and Trackballs
+    - listitem:
+      - link "Fashion and Accessories":
+        - img
+        - text: Fashion and Accessories
+    - listitem:
+      - link "Beauty and Saloon":
+        - img
+        - text: Beauty and Saloon
+    - listitem:
+      - link "Autoparts and Accessories":
+        - img
+        - text: Autoparts and Accessories
+    - listitem:
+      - link "Washing machine":
+        - img
+        - text: Washing machine
+    - listitem:
+      - link "Gaming consoles":
+        - img
+        - text: Gaming consoles
+    - listitem:
+      - link "Air conditioner":
+        - img
+        - text: Air conditioner
+    - listitem:
+      - link "Web Cameras":
+        - img
+        - text: Web Cameras
+- heading "Quick Links close" [level=5]:
+  - text: Quick Links
+  - link "close": 
+- navigation:
+  - list:
+    - listitem:
+      - link " Special Hot"
+    - listitem:
+      - link " Wishlist"
+    - listitem:
+      - link " Compare"
+    - listitem:
+      - link " My account"
+    - listitem:
+      - link " Blog"
+    - listitem:
+      - link " Tracking"
+    - listitem:
+      - link " Contact us"
+- separator
+- paragraph: Place here any module, widget, design or HTML. for example menu, categories
+- heading "Cart close" [level=5]:
+  - text: Cart
+  - link "close": 
+- table:
+  - rowgroup:
+    - 'row "HTC Touch HD HTC Touch HD Model: Product 1 Reward Points: 1200 x3 $438.00"':
+      - cell "HTC Touch HD":
+        - link "HTC Touch HD":
+          - img "HTC Touch HD"
+      - 'cell "HTC Touch HD Model: Product 1 Reward Points: 1200"':
+        - link "HTC Touch HD"
+        - text: "Model: Product 1 Reward Points: 1200"
+      - cell "x3"
+      - cell "$438.00"
+- table:
+  - rowgroup:
+    - 'row "Sub-Total: $360.00"':
+      - cell "Sub-Total:"
+      - cell "$360.00":
+        - strong: $360.00
+    - 'row "Eco Tax (-2.00): $6.00"':
+      - cell "Eco Tax (-2.00):"
+      - cell "$6.00":
+        - strong: $6.00
+    - 'row "VAT (20%): $72.00"':
+      - cell "VAT (20%):"
+      - cell "$72.00":
+        - strong: $72.00
+    - 'row "Total: $438.00"':
+      - cell "Total:"
+      - cell "$438.00":
+        - strong: $438.00
+- button " Edit cart"
+- button " Checkout"
+- heading "Filter" [level=4]
+- button:
+  - img
+- text: Price 
+- spinbutton "Minimum Price": "98"
+- text: to
+- spinbutton "Maximum Price": "2000"
+- text: Manufacturer 
+- checkbox "Apple"
+- text: Apple 42
+- checkbox "Canon"
+- text: Canon 10
+- checkbox "Hewlett-Packard"
+- text: Hewlett-Packard 10
+- checkbox "HTC"
+- text: HTC 8
+- checkbox "Nikon"
+- text: Nikon 2
+- checkbox "Palm"
+- text: Palm 2
+- checkbox "Sony"
+- text: Sony 1
+- link "See more"
+- text: Search 
+- textbox "Search"
+- text: Color 
+- img "Blue"
+- img "Pink"
+- img "Black"
+- img "Orange"
+- img "Red"
+- img "Brown"
+- img "Green"
+- img "Yellow"
+- text: Availability 
+- checkbox "In stock"
+- text: In stock 58
+- checkbox "Out Of Stock"
+- text: Out Of Stock 12
+- checkbox "2-3 Days"
+- text: 2-3 Days 3
+- checkbox "Pre-Order"
+- text: Pre-Order 2 Size  L M S XL XXL Discount 
+- radio "10% off or more" [disabled]
+- text: 10% off or more 0
+- radio "20% off or more" [disabled]
+- text: 20% off or more 0
+- radio "30% off or more" [disabled]
+- text: 30% off or more 0
+- radio "40% off or more" [disabled]
+- text: 40% off or more 0
+- radio "50% off or more" [disabled]
+- text: 50% off or more 0 Rating 
+- radio "     & up" [disabled]
+- text:      & up 0
+- radio "     & up" [disabled]
+- text:      & up 0
+- radio "     & up" [disabled]
+- text:      & up 0
+- radio "     & up" [disabled]
+- text:      & up 0
+- banner:
+  - button ""
+  - figure:
+    - link "Poco Electro":
+      - img "Poco Electro"
+  - button "All Categories"
+  - textbox "Search For Products"
+  - button "Search"
+  - link "Compare":
+    - img
+  - link "Wishlist":
+    - img
+  - button "3":
+    - img
+    - text: "3"
+  - button "Shop by Category":
+    - img
+    - text: Shop by Category
+  - navigation:
+    - list:
+      - listitem:
+        - link "Home"
+      - listitem:
+        - link "Special Hot"
+      - listitem:
+        - link "Blog"
+      - listitem:
+        - button "Mega Menu"
+      - listitem:
+        - button "AddOns Featured"
+      - listitem:
+        - button " My account"
+  - paragraph:
+    - strong: This is a dummy website for Web Automation Testing
+- figure:
+  - link "Apple Cinema 30\"":
+    - img "Apple Cinema 30\""
+- navigation "breadcrumb":
+  - list:
+    - listitem:
+      - link "Home": 
+    - listitem: / Desktops
+- heading "Desktops" [level=1]
+- img "Desktops"
+- paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper auctor neque vitae tempus quam pellentesque. Facilisis leo vel fringilla est ullamcorper. Tellus id interdum velit laoreet id donec ultrices tincidunt. Vitae nunc sed velit dignissim sodales. Mi proin sed libero enim sed. Mi quis hendrerit dolor magna eget est lorem ipsum.
+- link "PC (75)":
+  - figure "PC (75)":
+    - img "PC (75)"
+    - text: PC (75)
+- link "Mac (75)":
+  - figure "Mac (75)":
+    - img "Mac (75)"
+    - text: Mac (75)
+- button ""
+- button ""
+- link "Product Compare (0)"
+- text: "Show:"
+- combobox "Show:":
+  - option "15" [selected]
+  - option "25"
+  - option "50"
+  - option "75"
+  - option "100"
+- text: "Sort By:"
+- combobox "Sort By:":
+  - option "Default" [selected]
+  - option "Best sellers"
+  - option "Popular"
+  - option "Newest"
+  - option "Name (A - Z)"
+  - option "Name (Z - A)"
+  - option "Price (Low > High)"
+  - option "Price (High > Low)"
+  - option "Rating (Highest)"
+  - option "Rating (Lowest)"
+  - option "Model (A - Z)"
+  - option "Model (Z - A)"
+- link "HTC Touch HD HTC Touch HD HTC Touch HD HTC Touch HD":
+  - img "HTC Touch HD"
+  - list:
+    - listitem:
+      - img "HTC Touch HD"
+    - listitem:
+      - img "HTC Touch HD"
+    - listitem:
+      - img "HTC Touch HD"
+- button ""
+- button ""
+- button ""
+- button ""
+- heading "HTC Touch HD" [level=4]:
+  - link "HTC Touch HD"
+- text: $146.00
+- link "Palm Treo Pro Palm Treo Pro Palm Treo Pro Palm Treo Pro":
+  - img "Palm Treo Pro"
+  - list:
+    - listitem:
+      - img "Palm Treo Pro"
+    - listitem:
+      - img "Palm Treo Pro"
+    - listitem:
+      - img "Palm Treo Pro"
+- button ""
+- button ""
+- button ""
+- button ""
+- heading "Palm Treo Pro" [level=4]:
+  - link "Palm Treo Pro"
+- text: $337.99
+- link "Canon EOS 5D Canon EOS 5D Canon EOS 5D Canon EOS 5D":
+  - img "Canon EOS 5D"
+  - list:
+    - listitem:
+      - img "Canon EOS 5D"
+    - listitem:
+      - img "Canon EOS 5D"
+    - listitem:
+      - img "Canon EOS 5D"
+- button ""
+- button ""
+- button ""
+- button ""
+- heading "Canon EOS 5D" [level=4]:
+  - link "Canon EOS 5D"
+- text: $134.00
+- link "Nikon D300 Nikon D300 Nikon D300 Nikon D300":
+  - img "Nikon D300"
+  - list:
+    - listitem:
+      - img "Nikon D300"
+    - listitem:
+      - img "Nikon D300"
+    - listitem:
+      - img "Nikon D300"
+- button ""
+- button ""
+- button ""
+- button ""
+- heading "Nikon D300" [level=4]:
+  - link "Nikon D300"
+- text: $98.00
+- link "iPod Touch iPod Touch iPod Touch iPod Touch":
+  - img "iPod Touch"
+  - list:
+    - listitem:
+      - img "iPod Touch"
+    - listitem:
+      - img "iPod Touch"
+    - listitem:
+      - img "iPod Touch"
+- button ""
+- button ""
+- button ""
+- button ""
+- heading "iPod Touch" [level=4]:
+  - link "iPod Touch"
+- text: $194.00
+- link "Samsung SyncMaster 941BW Samsung SyncMaster 941BW Samsung SyncMaster 941BW Samsung SyncMaster 941BW":
+  - img "Samsung SyncMaster 941BW"
+  - list:
+    - listitem:
+      - img "Samsung SyncMaster 941BW"
+    - listitem:
+      - img "Samsung SyncMaster 941BW"
+    - listitem:
+      - img "Samsung SyncMaster 941BW"
+- button ""
+- button ""
+- button ""
+- button ""
+- heading "Samsung SyncMaster 941BW" [level=4]:
+  - link "Samsung SyncMaster 941BW"
+- text: $242.00
+- link "iPod Shuffle iPod Shuffle iPod Shuffle iPod Shuffle":
+  - img "iPod Shuffle"
+  - list:
+    - listitem:
+      - img "iPod Shuffle"
+    - listitem:
+      - img "iPod Shuffle"
+    - listitem:
+      - img "iPod Shuffle"
+- button ""
+- button ""
+- button ""
+- button ""
+- heading "iPod Shuffle" [level=4]:
+  - link "iPod Shuffle"
+- text: $182.00
+- link "iPod Nano iPod Nano iPod Nano iPod Nano":
+  - img "iPod Nano"
+  - list:
+    - listitem:
+      - img "iPod Nano"
+    - listitem:
+      - img "iPod Nano"
+    - listitem:
+      - img "iPod Nano"
+- button ""
+- button ""
+- button ""
+- button ""
+- heading "iPod Nano" [level=4]:
+  - link "iPod Nano"
+- text: $122.00
+- link "iPhone iPhone iPhone iPhone":
+  - img "iPhone"
+  - list:
+    - listitem:
+      - img "iPhone"
+    - listitem:
+      - img "iPhone"
+    - listitem:
+      - img "iPhone"
+- button ""
+- button ""
+- button ""
+- button ""
+- heading "iPhone" [level=4]:
+  - link "iPhone"
+- text: $123.20
+- link "iMac iMac iMac iMac":
+  - img "iMac"
+  - list:
+    - listitem:
+      - img "iMac"
+    - listitem:
+      - img "iMac"
+    - listitem:
+      - img "iMac"
+- button ""
+- button ""
+- button ""
+- button ""
+- heading "iMac" [level=4]:
+  - link "iMac"
+- text: $170.00
+- link "Apple Cinema 30&quot; Apple Cinema 30&quot; Apple Cinema 30&quot;":
+  - img "Apple Cinema 30&quot;"
+  - list:
+    - listitem:
+      - img "Apple Cinema 30&quot;"
+    - listitem:
+      - img "Apple Cinema 30&quot;"
+- button ""
+- button ""
+- button ""
+- button ""
+- heading "Apple Cinema 30\"" [level=4]:
+  - link "Apple Cinema 30\""
+- text: $122.00
+- link "MacBook MacBook MacBook MacBook":
+  - img "MacBook"
+  - list:
+    - listitem:
+      - img "MacBook"
+    - listitem:
+      - img "MacBook"
+    - listitem:
+      - img "MacBook"
+- button ""
+- button ""
+- button ""
+- button ""
+- heading "MacBook" [level=4]:
+  - link "MacBook"
+- text: $602.00
+- link "MacBook Air MacBook Air MacBook Air MacBook Air":
+  - img "MacBook Air"
+  - list:
+    - listitem:
+      - img "MacBook Air"
+    - listitem:
+      - img "MacBook Air"
+    - listitem:
+      - img "MacBook Air"
+- button ""
+- button ""
+- button ""
+- button ""
+- heading "MacBook Air" [level=4]:
+  - link "MacBook Air"
+- text: $1,202.00
+- link "MacBook Pro MacBook Pro MacBook Pro MacBook Pro":
+  - img "MacBook Pro"
+  - list:
+    - listitem:
+      - img "MacBook Pro"
+    - listitem:
+      - img "MacBook Pro"
+    - listitem:
+      - img "MacBook Pro"
+- button ""
+- button ""
+- button ""
+- button ""
+- heading "MacBook Pro" [level=4]:
+  - link "MacBook Pro"
+- text: $2,000.00
+- link "Sony VAIO Sony VAIO Sony VAIO Sony VAIO":
+  - img "Sony VAIO"
+  - list:
+    - listitem:
+      - img "Sony VAIO"
+    - listitem:
+      - img "Sony VAIO"
+    - listitem:
+      - img "Sony VAIO"
+- button ""
+- button ""
+- button ""
+- button ""
+- heading "Sony VAIO" [level=4]:
+  - link "Sony VAIO"
+- text: $1,202.00
+- list:
+  - listitem: "1"
+  - listitem:
+    - link "2"
+  - listitem:
+    - link "3"
+  - listitem:
+    - link "4"
+  - listitem:
+    - link "5"
+  - listitem:
+    - link ">"
+  - listitem:
+    - link ">|"
+- text: Showing 1 to 15 of 75 (5 Pages)
+- heading "Filter" [level=3]
+- text: Price 
+- spinbutton "Minimum Price": "98"
+- text: to
+- spinbutton "Maximum Price": "2000"
+- text: Manufacturer 
+- img "Apple"
+- text: Apple 42
+- img "Canon"
+- text: Canon 10
+- img "Hewlett-Packard"
+- text: Hewlett-Packard 10
+- img "HTC"
+- text: HTC 8
+- img "Nikon"
+- text: Nikon 2
+- img "Palm"
+- text: Palm 2
+- img "Sony"
+- text: Sony 1
+- link "See more"
+- text: Sub category 
+- checkbox "Mac"
+- text: Mac 75
+- checkbox "PC"
+- text: PC 75 Search 
+- textbox "Search"
+- text: Color 
+- img "Blue"
+- img "Pink"
+- img "Black"
+- img "Orange"
+- img "Red"
+- img "Brown"
+- img "Green"
+- img "Yellow"
+- text: Availability 
+- checkbox "In stock"
+- text: In stock 58
+- checkbox "Out Of Stock"
+- text: Out Of Stock 12
+- checkbox "2-3 Days"
+- text: 2-3 Days 3
+- checkbox "Pre-Order"
+- text: Pre-Order 2 Size  L M S XL XXL Discount 
+- radio "10% off or more" [disabled]
+- text: 10% off or more 0
+- radio "20% off or more" [disabled]
+- text: 20% off or more 0
+- radio "30% off or more" [disabled]
+- text: 30% off or more 0
+- radio "40% off or more" [disabled]
+- text: 40% off or more 0
+- radio "50% off or more" [disabled]
+- text: 50% off or more 0 Rating 
+- radio "     & up" [disabled]
+- text:      & up 0
+- radio "     & up" [disabled]
+- text:      & up 0
+- radio "     & up" [disabled]
+- text:      & up 0
+- radio "     & up" [disabled]
+- text:      & up 0 Desktops (75)
+- link "- PC (75)"
+- link "- Mac (75)"
+- link "Laptops (75)"
+- link "Components (75)"
+- link "Tablets (75)"
+- link "Software (75)"
+- link "Phones & PDAs (75)"
+- link "Cameras (75)"
+- link "MP3 Players (75)"
+- contentinfo:
+  - paragraph: © LambdaTest - Powered by OpenCart
+```
+
+# Test source
+
+```ts
+   1 | import { Page } from "@playwright/test";
+   2 |
+   3 | export default class SpecialHotPage{
+   4 |
+   5 |
+   6 |     constructor(public page: Page) { }
+   7 |
+   8 |     async addFirstProductToTheCart() { 
+   9 |         await this.page.click("//div[@class='nav flex-column nav-pills custom-pills-left']/a"),
+  10 |         await this.page.hover("//div[@class='image']/a", {
+  11 |             strict: false
+  12 |         });
+  13 |         await this.page.locator("(//button[@title='Add to Cart'])").nth(0).click();
+  14 |     }
+  15 |     async isToastVisible() { 
+  16 |         // await this.page.waitFor
+  17 |         const toast = this.page.locator("//a[.='View Cart ']");
+> 18 |         await toast.waitFor({state:"visible"})
+     |                     ^ Error: locator.waitFor: Test timeout of 30000ms exceeded.
+  19 |         return toast;
+  20 |     }
+  21 | }
+```

@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","9659","Register test_01","chromium","Thu Apr 17 17:03:23 IST 2025","passed","Thu Apr 17 17:03:32 IST 2025","Page object test demo","pomtest/addToCart.test.ts","",""
+"","7546","Login test_02","chromium","Thu Apr 17 17:03:33 IST 2025","passed","Thu Apr 17 17:03:40 IST 2025","Page object test demo","pomtest/addToCart.test.ts","",""
+"","31158","Add to cart test_03","chromium","Thu Apr 17 17:03:40 IST 2025","broken","Thu Apr 17 17:04:11 IST 2025","Page object test demo","pomtest/addToCart.test.ts","",""

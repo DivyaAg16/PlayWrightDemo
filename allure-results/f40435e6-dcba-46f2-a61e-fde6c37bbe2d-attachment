@@ -1,0 +1,81 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Page object test demo >> Add to cart test_03
+- Location: /home/divyag/Downloads/PlayWrightDemo/pomtest/addToCart.test.ts:40:9
+
+# Error details
+
+```
+Error: browserType.launch: Executable doesn't exist at /home/divyag/.cache/ms-playwright/chromium-1161/chrome-linux/chrome
+╔═════════════════════════════════════════════════════════════════════════╗
+║ Looks like Playwright Test or Playwright was just installed or updated. ║
+║ Please run the following command to download new browsers:              ║
+║                                                                         ║
+║     npx playwright install                                              ║
+║                                                                         ║
+║ <3 Playwright Team                                                      ║
+╚═════════════════════════════════════════════════════════════════════════╝
+```
+
+# Test source
+
+```ts
+   1 | import { expect, test } from "@playwright/test";
+   2 | import RegisterPage from "../pages/registerPage";
+   3 | import HomePage from "../pages/homePage";
+   4 | import LoginPage from "../pages/loginPage";
+   5 | import SpecialHotPage from "../pages/specialHotPage";
+   6 |
+   7 |
+   8 | const email = "divya03@yopmail.com";
+   9 | const password = "divya@123";
+  10 | test.describe("Page object test demo", async () => {
+  11 |
+  12 |     test("Register test_01", async ({ page, baseURL }, testInfo) => {
+  13 |         console.log('TITLE: ' + testInfo.title);
+  14 |
+  15 |         const register = new RegisterPage(page);
+  16 |         await page.goto(`${baseURL}route=account/register`);
+  17 |         await register.enterFirstName("Divya");
+  18 |         await register.enterLastName("Agarwal")
+  19 |         await register.enterEmail(email);
+  20 |         await register.enterTelephone("1234567890")
+  21 |         await register.enterPassword(password);
+  22 |         await register.enterConfirmPassword(password);
+  23 |         expect(register.isSubscribeChecked()).toBeChecked();
+  24 |         await register.clickTermandConditon();
+  25 |         await register.clickContinueToRegister();
+  26 |         console.log('STATUS: ' + testInfo.status);
+  27 |
+  28 |
+  29 |     })
+  30 |
+  31 |     test("Login test_02", async ({ page, baseURL }) => {
+  32 |         const login = new LoginPage(page);
+  33 |         await page.goto(`${baseURL}route=account/login`)
+  34 |         await login.enterEmail(email);
+  35 |         await login.enterLoginPassword(password);
+  36 |         await login.clickLoginBtn();
+  37 |         expect(await page.title()).toBe("My Account");
+  38 |     })
+  39 |
+> 40 |     test("Add to cart test_03", async ({ page, baseURL }) => {
+     |         ^ Error: browserType.launch: Executable doesn't exist at /home/divyag/.cache/ms-playwright/chromium-1161/chrome-linux/chrome
+  41 |         const login = new LoginPage(page);
+  42 |         const homePage = new HomePage(page);
+  43 |         const special = new SpecialHotPage(page);
+  44 |         await page.goto(`${baseURL}route=account/login`)
+  45 |         await login.login(email, password);
+  46 |         await homePage.clickOnSpecialHotMenu();
+  47 |         await special.addFirstProductToTheCart();
+  48 |         const isCartVisible = await special.isToastVisible();
+  49 |         expect(isCartVisible).toBeVisible();
+  50 |     })
+  51 | })
+```
