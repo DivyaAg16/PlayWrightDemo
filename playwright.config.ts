@@ -19,7 +19,7 @@ workers: process.env.CI ? 1 : undefined,
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     baseURL: "https://ecommerce-playground.lambdatest.io/index.php?",
-    headless: false,
+    headless: true,
     screenshot: "only-on-failure",
     video: "on",
     trace: "on"
